@@ -1,0 +1,39 @@
+body{
+    position: relative;
+    background-color: white;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a.name{
+    color: black;
+    text-decoration: none;
+}
+
+ul.nav-links{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0px;
+}
+/* Finally got to target a in the ul class = nav-links*/
+ul.nav-links a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navBar{
+    background-color: rgb(102, 102, 249);
+    border-radius: 24px;
+}
+
+
+
+
