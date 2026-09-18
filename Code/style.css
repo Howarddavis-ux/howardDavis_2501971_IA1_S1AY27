@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    color: white;
+    background-color: black;
+}
+/*Header*/
+a {
+    padding: 16px 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+
+header{
+    display: flex;
+    position: sticky;
+    color: white;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+
+    margin: 6px;
+}
+
+header a.name{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul.nav-links{
+    display: flex;
+    justify-content: center;
+}
+/* Finally got to target a in the ul class = nav-links*/
+ul.nav-links a{
+    display: block;
+    font-family: inherit;
+}
+
+.navBar{
+    display: flex;
+    position: sticky;
+    color: white;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    background-color: rgba(211, 211, 211, 0.178);
+    backdrop-filter: blur(10px);
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*Content*/
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100vw;
+    height: auto;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 99vw;
+    height: 300px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+div.container div{
+    height: auto;
+    width: auto;
+    font-size: 80px;
+}
