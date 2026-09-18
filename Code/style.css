@@ -1,31 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary-bg: white;
+    --font-color: black;
+
+}
 body{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     position: relative;
-    color: white;
-    background-color: black;
+    color: var(--font-color);
+    background-color: var(--primary-bg);
 }
-/*Header*/
+/*Navigation*/
 a {
     padding: 16px 16px;
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
     font-weight: bold;
     justify-content: center;
 }
 
-
 header{
     display: flex;
     position: sticky;
-    color: white;
+    color: var(--font-color);
     top: 0;
     justify-content: center;
     align-items: center;
-
     margin: 6px;
 }
 
@@ -34,31 +37,62 @@ header a.name{
     font-size: 18px;
 }
 
-ul.nav-links{
+.navBar{
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 860px;
+    top: 0;
+    border-radius: 24px;
     display: flex;
+    position: sticky;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.178);
+    backdrop-filter: blur(10px);
+
+}
+
+ul.nav-links{
+    display: inline-flex;
     justify-content: center;
 }
 /* Finally got to target a in the ul class = nav-links*/
+ul.nav-links li{
+    display: inline-flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 ul.nav-links a{
     display: block;
     font-family: inherit;
 }
 
-.navBar{
-    display: flex;
-    position: sticky;
-    color: white;
-    top: 0;
-    display: flex;
-    align-items: center;
-    border-radius: 24px;
-    background-color: rgba(211, 211, 211, 0.178);
-    backdrop-filter: blur(10px);
-    height: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
+.nav-icon{
+    display: inline-block;
+    width: 24px;         /* Change to your desired width */
+    height: 24px;        /* Change to your desired height */
+    margin-right: -12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
 }
 
+.home-icon{
+    background-image: url('/Assets/home_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+}
+.pro-icon{
+    background-image: url('/Assets/work_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+}
+.personality-icon{
+    background-image: url('/Assets/cognition_2_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+}
+.dev-icon{
+    background-image: url('/Assets/commit_28dp_000000_FILL0_wght700_GRAD200_opsz24.png');
+}
 /*Content*/
 #home{
     display: flex;
@@ -82,5 +116,5 @@ ul.nav-links a{
 div.container div{
     height: auto;
     width: auto;
-    font-size: 80px;
+    font-size: 100px;
 }
