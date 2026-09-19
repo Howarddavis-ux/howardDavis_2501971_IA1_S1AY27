@@ -12,6 +12,7 @@ body{
     position: relative;
     color: var(--font-color);
     background-color: var(--primary-bg);
+    overflow-x: clip;
 }
 /*Navigation*/
 a {
@@ -23,13 +24,17 @@ a {
 }
 
 header{
+    margin: 6px;
     display: flex;
-    position: sticky;
-    color: var(--font-color);
     top: 0;
     justify-content: center;
     align-items: center;
-    margin: 6px;
+    position: fixed;   /* Keeps the navbar in a static position on the screen */
+    top: 0;   
+    width: 100%;      
+    z-index: 1000;
+    color: var(--font-color);
+    
 }
 
 header a.name{
@@ -50,7 +55,7 @@ header a.name{
     color: white;
     align-items: center;
     background-color: rgba(211, 211, 211, 0.178);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);  
 
 }
 
@@ -72,8 +77,8 @@ ul.nav-links a{
 
 .nav-icon{
     display: inline-block;
-    width: 24px;         /* Change to your desired width */
-    height: 24px;        /* Change to your desired height */
+    width: 24px;       
+    height: 24px;        
     margin-right: -12px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -95,26 +100,47 @@ ul.nav-links a{
 }
 /*Content*/
 #home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
     padding: 10px;
     width: 100vw;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
 }
 
 .container{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    border-radius: 15px;
+    padding: 40px;
+    gap: 15px;
     display: flex;
     align-items: center;
-    width: 99vw;
-    height: 300px;
-    border-radius: 15px;
-    padding: 5px;
+    justify-content: space-between;
 }
 
 div.container div{
     height: auto;
     width: auto;
-    font-size: 100px;
+    flex: 1 1 620px;
+    font-size: clamp(3.5rem, 6vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    vertical-align: middle;
+    overflow: hidden;
+}
+img{
+   /* width: clamp(220px, 29vw, 420px);*/
+   width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+
 }
