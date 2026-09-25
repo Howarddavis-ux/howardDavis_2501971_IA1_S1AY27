@@ -6,6 +6,7 @@
 :root{
     --primary-bg: white;
     --font-color: black;
+    --blur-color:rgba(211, 211, 211, 0.384);
 
 }
 body{
@@ -18,6 +19,7 @@ body{
     background-color: var(--primary-bg);
     overflow-x: clip;
 }
+/*******Home******/
 /*Navigation*/
 a {
     padding: 16px 16px;
@@ -58,7 +60,7 @@ header a.name{
     justify-content: space-evenly;
     color: white;
     align-items: center;
-    background-color: rgba(211, 211, 211, 0.384);
+    background-color: var(--blur-color);
     backdrop-filter: blur(10px);  
 
 }
@@ -105,25 +107,21 @@ ul.nav-links li:hover{
     /*Both icon and links would not change together*/
 }
 /*Content*/
-#home{
+#master{
     margin-top: 40px;
-    padding: 10px;
+    padding: 40px;
     width: 100vw;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 30px;
-
 }
 
 .container{
     width: min(99vw, 1500px);
     min-height: 300px;
     border-radius: 15px;
-    padding: 40px;
-    gap: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,7 +143,7 @@ div.container p{
     letter-spacing: 0em;
 }
 img{
-    /* width: clamp(220px, 29vw, 420px);*/
+        /* width: clamp(220px, 29vw, 420px);*/
     width: 350px;
     max-width: 100%;
     height: auto;
@@ -153,4 +151,55 @@ img{
     display: block;
     flex-shrink: 0;
     object-fit: contain;
+}
+
+/******Personality********/
+.selectable{
+    width: 963px;
+    height: 324px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blur-color);
+    backdrop-filter: blur(10px); 
+}
+
+.list{
+    width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.item-select{
+    display: none;
+}
+
+.image-display{
+    width: 240px;
+    height: 240px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.album-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /*Hide images*/
+}
+.image-display img{
+    border-radius: 10px;
+
+}
+
+#Window-Shopper:checked ~ .image-display #art1,
+#Kante:checked ~ .image-display #art2,
+#Wetin:checked ~ .image-display #art3,
+#Revolution:checked ~ .image-display #art4,
+#Dead-Man-Blues:checked ~ .image-display #art5,
+#Somewhere-Wonderful:checked ~ .image-display #art6
+
+{
+    display: block;
 }
